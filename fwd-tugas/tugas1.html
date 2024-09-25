@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulir Pendaftaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom:
+                5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="number"],
+        input[type="tel"] {
+            width: 100%;
+            padding:
+                10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+        }
+
+        .jenis_kelamin {
+            display: flex;
+            align-items: center;
+        }
+
+        .jenis_kelamin label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formulir Pendaftaran</h1>
+
+    <form>
+        <label name="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" required minlength="3">
+
+        <label name="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label name="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="8">
+
+        <label name="tanggal_lahir">Tanggal Lahir:</label>
+        <input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
+
+        <label name="umur">Umur:</label>
+        <input type="number" id="umur" name="umur" required min="18">
+
+        <label name="jenis_kelamin">Jenis Kelamin:</label>
+        <input type="radio" id="laki" name="jenis_kelamin" value="laki-laki" required>
+        <label name="laki">Laki-laki</label>
+        <input type="radio" id="perempuan" name="jenis_kelamin" value="perempuan" required>
+        <label name="perempuan">Perempuan</label>
+
+        <label name="telepon">Nomor Telepon:</label>
+        <input type="tel" id="telepon" name="telepon" pattern="[0-9]{10,13}" required>
+
+        <label name="foto">Unggah Foto Profil:</label>
+        <input type="file" id="foto" name="foto">
+
+        <label name="syarat">
+            <input type="checkbox" id="syarat" name="syarat" required>
+            Saya menyetujui <a href="#">Syarat dan Ketentuan</a>
+        </label>
+
+        <button type="submit">Daftar</button>
+    </form>
+</body>
+
+</html>
